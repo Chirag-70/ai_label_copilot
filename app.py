@@ -25,7 +25,7 @@ if input_type == "Paste Ingredients":
 elif input_type == "Upload Image":
     image = st.file_uploader("Upload food label image", type=["jpg", "png"])
     if image:
-        # MOCK OCR (acceptable for hackathon)
+        
         ingredients_text = "Sugar, Sodium Benzoate, Artificial Color"
 
 if st.button("Explain Ingredients"):
@@ -35,3 +35,4 @@ if st.button("Explain Ingredients"):
         st.markdown(result)
     else:
         st.warning("Please provide ingredients.")
+
