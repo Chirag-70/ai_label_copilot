@@ -4,7 +4,7 @@ import os
 import streamlit as st
 
 def explain_ingredients(ingredients_text: str) -> str:
-    # Get API key safely (Cloud + Local)
+    
     api_key = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
 
     if not api_key:
@@ -49,5 +49,6 @@ Do NOT give medical advice.
 
     except Exception as e:
         return "⚠️ AI service temporarily unavailable. Please try again."
+
 
 
